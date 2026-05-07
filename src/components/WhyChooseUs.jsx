@@ -3,7 +3,7 @@ const items = [
   'Premium materials',
   'Clean installation process',
   'Designed around your lifestyle',
-  'Local Naperville-area service',
+  'Trusted Midwest service',
   'No juggling multiple vendors',
 ];
 

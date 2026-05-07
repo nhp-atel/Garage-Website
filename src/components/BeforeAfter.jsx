@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { images } from '../config/images.js';
 
 export default function BeforeAfter() {
@@ -20,7 +21,6 @@ export default function BeforeAfter() {
 
       <div className="container-x relative py-20 lg:py-28">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left content */}
           <div className="lg:col-span-5 lg:pt-6">
             <div className="eyebrow !text-bronze-400 mb-6">Before · After</div>
             <h2 className="h-display !text-bone-50 text-[36px] sm:text-[44px] lg:text-[50px] leading-[1.05] text-balance">
@@ -50,15 +50,14 @@ export default function BeforeAfter() {
               ))}
             </div>
 
-            <a href="#quote" className="btn-bronze mt-9">
-              See your transformation
+            <Link to="/gallery" className="btn-bronze mt-9">
+              See more transformations
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
-            </a>
+            </Link>
           </div>
 
-          {/* Right slider */}
           <div className="lg:col-span-7">
             <div
               ref={ref}
@@ -66,7 +65,6 @@ export default function BeforeAfter() {
               onMouseMove={onMove}
               onTouchMove={onMove}
             >
-              {/* AFTER (full) */}
               <div className="absolute inset-0">
                 <img
                   src={images.after.src}
@@ -82,7 +80,6 @@ export default function BeforeAfter() {
                 </div>
               </div>
 
-              {/* BEFORE clipped */}
               <div
                 className="absolute inset-0 overflow-hidden"
                 style={{ clipPath: `polygon(0 0, ${pos}% 0, ${pos}% 100%, 0 100%)` }}
@@ -101,7 +98,6 @@ export default function BeforeAfter() {
                 </div>
               </div>
 
-              {/* Divider */}
               <div
                 className="absolute top-0 bottom-0 w-px bg-bone-50/90 pointer-events-none"
                 style={{ left: `${pos}%` }}
@@ -115,7 +111,7 @@ export default function BeforeAfter() {
             </div>
 
             <p className="mt-4 text-[12px] uppercase tracking-[0.18em] text-bone-200/50">
-              Drag to compare · Naperville 3-car garage
+              Drag to compare · 3-car garage transformation
             </p>
           </div>
         </div>

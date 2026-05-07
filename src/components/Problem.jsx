@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { images } from '../config/images.js';
 
 const problems = [
@@ -50,7 +51,7 @@ export default function Problem() {
                 Your garage shouldn't feel like wasted space.
               </h2>
               <p className="mt-6 max-w-md text-[16px] leading-relaxed text-stone-deep">
-                Most garages in our area sit half-organized for years — full of stuff that doesn't belong inside, and far below the standard of the rest of the home.
+                Most garages sit half-organized for years — full of stuff that doesn't belong inside, and far below the standard of the rest of the home.
               </p>
 
               <div className="mt-8 relative aspect-[4/3] rounded-2xl overflow-hidden border border-ink-800/10 max-w-md">
@@ -63,7 +64,7 @@ export default function Problem() {
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-bone-50">
                   <span className="text-[11px] uppercase tracking-[0.18em] font-semibold">Typical "before"</span>
-                  <span className="text-[11px] uppercase tracking-[0.18em] text-bone-200/70">Naperville-area garage</span>
+                  <span className="text-[11px] uppercase tracking-[0.18em] text-bone-200/70">Residential garage</span>
                 </div>
               </div>
             </div>
@@ -91,12 +92,12 @@ export default function Problem() {
               <div className="font-display text-[20px] lg:text-[22px] leading-snug text-balance flex-1">
                 We turn that unused space into one of the cleanest, most functional areas of your home.
               </div>
-              <a href="#quote" className="btn-bronze whitespace-nowrap self-start md:self-auto">
-                Start with a free quote
+              <Link to="/contact" className="btn-bronze whitespace-nowrap self-start md:self-auto">
+                Start with a free estimate
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

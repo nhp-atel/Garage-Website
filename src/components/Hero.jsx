@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { images } from '../config/images.js';
 
 export default function Hero() {
@@ -8,9 +9,8 @@ export default function Hero() {
 
       <div className="container-x relative pt-12 lg:pt-20 pb-16 lg:pb-28">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left content — 6 cols */}
           <div className="lg:col-span-6 lg:pr-4">
-            <div className="eyebrow mb-7">Naperville · Established locally</div>
+            <div className="eyebrow mb-7">Premium garage transformations</div>
 
             <h1 className="h-display text-[44px] sm:text-[56px] lg:text-[68px] leading-[1.02] text-balance">
               Turn your garage into a clean,{' '}
@@ -18,17 +18,17 @@ export default function Hero() {
             </h1>
 
             <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-stone-deep">
-              Complete garage transformations in Naperville — flooring, storage, lighting, and finishing handled through one streamlined process.
+              Complete garage transformations — flooring, storage, lighting, and finishing handled through one streamlined process.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
-              <a href="#quote" className="btn-primary">
-                Get a Free Garage Design &amp; Quote
+              <Link to="/contact" className="btn-primary">
+                Book Your Free Estimate
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
-              </a>
-              <a href="#transformations" className="btn-secondary">See What We Can Transform</a>
+              </Link>
+              <Link to="/gallery" className="btn-secondary">See Transformations</Link>
             </div>
 
             <div className="mt-10 flex items-center gap-4 text-sm text-stone-deep">
@@ -39,14 +39,12 @@ export default function Hero() {
                   </svg>
                 ))}
               </div>
-              <span>Serving Naperville, Aurora, Plainfield, Bolingbrook, and nearby suburbs.</span>
+              <span>Trusted by homeowners across the Midwest.</span>
             </div>
           </div>
 
-          {/* Right visual — 6 cols */}
           <div className="lg:col-span-6 relative">
             <div className="relative">
-              {/* Main photo */}
               <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] rounded-2xl overflow-hidden shadow-lift bg-ink-800">
                 <img
                   src={images.hero.src}
@@ -60,7 +58,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-ink-900/15 to-transparent" />
                 <div className="absolute inset-0 flex flex-col justify-between p-6 lg:p-8">
                   <div className="flex items-center justify-between text-bone-100">
-                    <span className="text-[10px] uppercase tracking-[0.18em] text-bone-200/80 backdrop-blur-sm bg-ink-900/30 px-2.5 py-1 rounded-full">Featured project · Naperville</span>
+                    <span className="text-[10px] uppercase tracking-[0.18em] text-bone-200/80 backdrop-blur-sm bg-ink-900/30 px-2.5 py-1 rounded-full">Featured project</span>
                     <span className="text-[10px] uppercase tracking-[0.18em] text-bone-200/80 backdrop-blur-sm bg-ink-900/30 px-2.5 py-1 rounded-full">3-car garage</span>
                   </div>
                   <div className="flex items-end justify-between">
@@ -77,7 +75,6 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Overlay stat cards */}
               <div className="hidden sm:block absolute -left-6 lg:-left-10 top-12 bg-bone-50 rounded-xl shadow-lift border border-ink-800/8 p-4 w-56">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-bronze-600 mb-1.5">Three disciplines</div>
                 <div className="font-display text-[15px] text-ink-900 leading-snug">Flooring + Storage + Lighting</div>
@@ -96,12 +93,11 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Trust strip */}
         <div className="mt-16 lg:mt-24 pt-8 border-t border-ink-800/10 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { k: '12+', v: 'Years in the Chicago suburbs' },
+            { k: '12+', v: 'Years transforming garages' },
             { k: '500+', v: 'Garages transformed' },
-            { k: '100%', v: 'Local crews, no subcontractors' },
+            { k: '100%', v: 'In-house crews, no subcontractors' },
             { k: '5★', v: 'Avg. homeowner rating' },
           ].map((s) => (
             <div key={s.v} className="flex items-baseline gap-3">

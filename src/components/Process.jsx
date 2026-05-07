@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const steps = [
   {
     n: '01',
@@ -83,12 +85,12 @@ export default function Process() {
           <div className="text-[15px] text-ink-800">
             Most garages are completed in <span className="font-semibold">2 to 5 days on site</span>, depending on scope.
           </div>
-          <a href="#quote" className="btn-primary !py-3 !px-5 text-[13px]">
+          <Link to="/contact" className="btn-primary !py-3 !px-5 text-[13px]">
             Schedule your assessment
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

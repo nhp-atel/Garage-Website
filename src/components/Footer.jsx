@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Footer() {
   return (
     <footer className="bg-ink-900 text-bone-200/70 border-t border-bone-200/5">
@@ -10,54 +12,40 @@ export default function Footer() {
                   <path d="M3 11l9-6 9 6v9a1 1 0 0 1-1 1h-4v-6H8v6H4a1 1 0 0 1-1-1z" />
                 </svg>
               </span>
-              <span className="font-display text-[16px] font-semibold text-bone-50">Naperville Garage Co.</span>
+              <span className="font-display text-[16px] font-semibold text-bone-50">Midwest Garage Co.</span>
             </div>
             <p className="mt-5 text-[14px] leading-relaxed max-w-sm">
-              Premium garage transformations across Naperville and the western suburbs. Flooring, storage, lighting, and finishing — coordinated by one team.
+              Premium garage transformations across the Midwest. Flooring, storage, lighting, and finishing — coordinated by one team.
             </p>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <div className="text-[11px] uppercase tracking-[0.18em] font-semibold text-bone-50 mb-4">Explore</div>
             <ul className="space-y-2.5 text-[14px]">
-              <li><a href="#services" className="hover:text-bronze-400 transition">Services</a></li>
-              <li><a href="#packages" className="hover:text-bronze-400 transition">Packages</a></li>
-              <li><a href="#process" className="hover:text-bronze-400 transition">Process</a></li>
-              <li><a href="#faqs" className="hover:text-bronze-400 transition">FAQs</a></li>
+              <li><Link to="/services" className="hover:text-bronze-400 transition">Services</Link></li>
+              <li><Link to="/packages" className="hover:text-bronze-400 transition">Packages</Link></li>
+              <li><Link to="/gallery" className="hover:text-bronze-400 transition">Gallery</Link></li>
+              <li><Link to="/about" className="hover:text-bronze-400 transition">About</Link></li>
+              <li><Link to="/contact" className="hover:text-bronze-400 transition">Contact</Link></li>
             </ul>
           </div>
 
-          <div className="lg:col-span-2">
-            <div className="text-[11px] uppercase tracking-[0.18em] font-semibold text-bone-50 mb-4">Service area</div>
-            <ul className="space-y-2.5 text-[14px]">
-              <li>Naperville</li>
-              <li>Aurora · Plainfield</li>
-              <li>Bolingbrook · Lisle</li>
-              <li>Wheaton · Woodridge</li>
-              <li>Downers Grove</li>
-            </ul>
-          </div>
-
-          <div className="lg:col-span-3">
-            <div className="text-[11px] uppercase tracking-[0.18em] font-semibold text-bone-50 mb-4">Contact</div>
-            <ul className="space-y-2.5 text-[14px]">
-              <li><a href="tel:+16305551234" className="hover:text-bronze-400 transition">(630) 555-1234</a></li>
-              <li><a href="mailto:hello@napervillegarage.co" className="hover:text-bronze-400 transition">hello@napervillegarage.co</a></li>
-              <li className="text-bone-200/50">Mon–Sat · 8am – 6pm</li>
-            </ul>
-
-            <a href="#quote" className="btn-bronze mt-6 !py-2.5 !px-4 text-[13px]">
-              Get free quote
-            </a>
+          <div className="lg:col-span-4">
+            <div className="text-[11px] uppercase tracking-[0.18em] font-semibold text-bone-50 mb-4">Get started</div>
+            <p className="text-[14px] leading-relaxed mb-5">
+              Tell us about your garage and what you're looking for. We respond within one business day.
+            </p>
+            <Link to="/contact" className="btn-bronze !py-2.5 !px-4 text-[13px]">
+              Book Your Free Estimate
+            </Link>
           </div>
         </div>
 
         <div className="mt-14 pt-6 border-t border-bone-200/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-[12px]">
-          <div>© {new Date().getFullYear()} Naperville Garage Co. — Licensed &amp; insured in Illinois.</div>
+          <div>© {new Date().getFullYear()} Midwest Garage Co. — Licensed &amp; insured.</div>
           <div className="flex gap-5">
             <a href="#" className="hover:text-bronze-400 transition">Privacy</a>
             <a href="#" className="hover:text-bronze-400 transition">Terms</a>
-            <a href="#" className="hover:text-bronze-400 transition">Sitemap</a>
           </div>
         </div>
       </div>

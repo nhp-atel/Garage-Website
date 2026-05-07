@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
+
 const packages = [
   {
     name: 'Essential',
     subtitle: 'A clean, durable upgrade',
     items: [
       'Standard floor coating',
-      'Surface prep',
-      'Crack repair',
+      'Basic lighting',
+      'Surface prep & crack repair',
       'Clean finished look',
-      'Great for basic refreshes',
     ],
     popular: false,
   },
@@ -15,11 +16,10 @@ const packages = [
     name: 'Enhanced',
     subtitle: 'More organized, more functional',
     items: [
-      'Premium floor coating',
-      'Slatwall or overhead storage',
+      'Premium flooring',
+      'Storage system',
       'Lighting upgrade',
       'Layout recommendations',
-      'Ideal for daily-use garages',
     ],
     popular: true,
   },
@@ -27,33 +27,34 @@ const packages = [
     name: 'Signature',
     subtitle: 'Full garage transformation',
     items: [
-      'Premium coating system',
-      'Cabinets and storage',
-      'Lighting design',
-      'Wall and finishing upgrades',
-      'Complete coordinated install',
+      'Full transformation',
+      'Custom cabinets',
+      'Wall & finishing work',
+      'Premium lighting design',
     ],
     popular: false,
   },
 ];
 
-export default function Packages() {
+export default function Packages({ heading = true }) {
   return (
     <section id="packages" className="bg-bone-100 border-y border-ink-800/8">
       <div className="container-x py-20 lg:py-28">
-        <div className="grid lg:grid-cols-12 gap-8 mb-12 items-end">
-          <div className="lg:col-span-7">
-            <div className="eyebrow mb-5">Packages</div>
-            <h2 className="h-display text-[36px] sm:text-[44px] lg:text-[52px] leading-[1.05] text-balance">
-              Choose the right level for your garage.
-            </h2>
+        {heading && (
+          <div className="grid lg:grid-cols-12 gap-8 mb-12 items-end">
+            <div className="lg:col-span-7">
+              <div className="eyebrow mb-5">Packages</div>
+              <h2 className="h-display text-[36px] sm:text-[44px] lg:text-[52px] leading-[1.05] text-balance">
+                Choose the right level for your garage.
+              </h2>
+            </div>
+            <div className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-ink-800/10">
+              <p className="text-[15px] text-stone-deep leading-relaxed">
+                Pick the package that fits how you use the space — we'll build the final scope around it during your free design walkthrough.
+              </p>
+            </div>
           </div>
-          <div className="lg:col-span-5 lg:pl-8 lg:border-l lg:border-ink-800/10">
-            <p className="text-[15px] text-stone-deep leading-relaxed">
-              Every garage is different. Pick the package that fits how you use the space — we'll build the final scope around it during your free design walkthrough.
-            </p>
-          </div>
-        </div>
+        )}
 
         <div className="grid lg:grid-cols-3 gap-5">
           {packages.map((p, i) => {
@@ -100,8 +101,8 @@ export default function Packages() {
                   ))}
                 </ul>
 
-                <a
-                  href="#quote"
+                <Link
+                  to="/contact"
                   className={`mt-auto inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition ${
                     popular
                       ? 'bg-bronze-500 text-ink-900 hover:bg-bronze-400'
@@ -112,14 +113,14 @@ export default function Packages() {
                   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                     <path d="M5 12h14M13 6l6 6-6 6" />
                   </svg>
-                </a>
+                </Link>
               </article>
             );
           })}
         </div>
 
         <p className="mt-8 text-[13px] text-stone-mid">
-          All packages include site assessment, final walkthrough, and project coordination at no extra cost.
+          Every garage is customized. Final pricing depends on garage size and selections.
         </p>
       </div>
     </section>

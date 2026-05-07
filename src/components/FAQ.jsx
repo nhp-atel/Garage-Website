@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const faqs = [
   {
@@ -11,15 +12,15 @@ const faqs = [
   },
   {
     q: 'What floor coating is best?',
-    a: 'For most Naperville-area garages, we recommend a polyaspartic system with a flake topcoat — it cures fast, handles cold winters, and resists hot tire pickup. Standard epoxy is still a strong, more affordable option. We walk through the trade-offs during your assessment so the choice fits your use and budget.',
+    a: 'For most garages, we recommend a polyaspartic system with a flake topcoat — it cures fast, handles cold winters, and resists hot tire pickup. Standard epoxy is still a strong, more affordable option. We walk through the trade-offs during your assessment so the choice fits your use and budget.',
   },
   {
     q: 'Can I choose only flooring or storage?',
     a: 'Absolutely. Plenty of homeowners start with just flooring or just storage and come back later for the rest. Our Essential package is a flooring-only refresh. The advantage of working with us either way is that we plan everything to be compatible if you decide to expand the project later.',
   },
   {
-    q: 'Do you serve areas outside Naperville?',
-    a: 'Yes — we regularly work in Aurora, Plainfield, Bolingbrook, Lisle, Wheaton, Woodridge, and Downers Grove. If you\'re in a nearby suburb not listed, contact us and we\'ll confirm availability.',
+    q: 'Where do you work?',
+    a: 'We service homeowners across the Midwest. Reach out via the Contact page with your city and we\'ll confirm availability and timeline.',
   },
   {
     q: 'Do you offer custom quotes?',
@@ -79,12 +80,9 @@ export default function FAQ() {
                 <div className="text-[14px] text-stone-deep mb-4">
                   Can't find what you're looking for?
                 </div>
-                <a href="#quote" className="btn-primary !py-2.5 !px-4 text-[13px] w-full">
-                  Ask in your free quote
-                </a>
-                <a href="tel:+16305551234" className="block mt-3 text-center text-[13px] text-ink-700 hover:text-bronze-700 transition">
-                  or call (630) 555-1234
-                </a>
+                <Link to="/contact" className="btn-primary !py-2.5 !px-4 text-[13px] w-full">
+                  Ask in your free estimate
+                </Link>
               </div>
             </div>
           </aside>

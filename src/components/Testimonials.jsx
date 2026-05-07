@@ -2,19 +2,19 @@ const reviews = [
   {
     quote: 'The garage finally feels like part of the house. We used to keep the door shut so guests didn\'t see it — now it\'s the first thing we show people.',
     name: 'Mark & Jenna R.',
-    location: 'Naperville · 3-car garage',
+    location: '3-car garage transformation',
     package: 'Signature',
   },
   {
     quote: 'The storage layout made a huge difference. They built it around the way we actually use the space — not just lined the walls with shelves.',
     name: 'David K.',
-    location: 'Wheaton · 2-car garage',
+    location: '2-car garage with custom storage',
     package: 'Enhanced',
   },
   {
     quote: 'The process was organized from quote to finish. We had one person to talk to the whole time and the schedule held exactly to what they told us.',
     name: 'Priya S.',
-    location: 'Aurora · 2.5-car garage',
+    location: '2.5-car garage refresh',
     package: 'Enhanced',
   },
 ];
@@ -41,7 +41,7 @@ export default function Testimonials() {
                 </svg>
               ))}
             </div>
-            <span>4.9 average · Verified Naperville-area homeowners</span>
+            <span>4.9 average · Verified homeowner reviews</span>
           </div>
         </div>
 
