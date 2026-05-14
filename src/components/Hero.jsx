@@ -10,25 +10,25 @@ export default function Hero() {
       <div className="container-x relative pt-12 lg:pt-20 pb-16 lg:pb-28">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-6 lg:pr-4">
-            <div className="eyebrow mb-7">Premium garage transformations</div>
+            <div className="eyebrow mb-7">Garage transformations</div>
 
             <h1 className="h-display text-[44px] sm:text-[56px] lg:text-[68px] leading-[1.02] text-balance">
-              Turn your garage into a clean,{' '}
-              <span className="italic font-normal text-bronze-600">organized</span>, high-end space.
+              Premium garage{' '}
+              <span className="italic font-normal text-bronze-600">transformations</span>.
             </h1>
 
             <p className="mt-7 max-w-xl text-[17px] leading-relaxed text-stone-deep">
-              Complete garage transformations — flooring, storage, lighting, and finishing handled through one streamlined process.
+              Flooring, storage, lighting, and complete garage upgrades — designed to elevate your space.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link to="/contact" className="btn-primary">
-                Book Your Free Estimate
+                Book Free Estimate
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M13 6l6 6-6 6" />
                 </svg>
               </Link>
-              <Link to="/gallery" className="btn-secondary">See Transformations</Link>
+              <Link to="/gallery" className="btn-secondary">View Gallery</Link>
             </div>
 
             <div className="mt-10 flex items-center gap-4 text-sm text-stone-deep">

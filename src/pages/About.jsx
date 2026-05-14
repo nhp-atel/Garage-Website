@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import WhyChooseUs from '../components/WhyChooseUs.jsx';
-import Process from '../components/Process.jsx';
 import CTABanner from '../components/CTABanner.jsx';
 import { images } from '../config/images.js';
 
@@ -64,8 +63,6 @@ export default function About() {
       </section>
 
       <WhyChooseUs />
-
-      <Process />
 
       <section className="relative">
         <div className="container-x py-20 lg:py-24">

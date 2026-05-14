@@ -5,6 +5,7 @@ import Footer from './components/Footer.jsx';
 import FloatingCTA from './components/FloatingCTA.jsx';
 import Home from './pages/Home.jsx';
 import ServicesPage from './pages/ServicesPage.jsx';
+import ServiceDetail from './pages/ServiceDetail.jsx';
 import PackagesPage from './pages/PackagesPage.jsx';
 import Gallery from './pages/Gallery.jsx';
 import About from './pages/About.jsx';
@@ -27,6 +28,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />

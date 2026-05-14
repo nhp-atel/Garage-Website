@@ -4,6 +4,7 @@ import CTABanner from '../components/CTABanner.jsx';
 const services = [
   {
     key: 'flooring',
+    slug: 'flooring',
     label: '01',
     title: 'Garage Flooring',
     body: 'Polyaspartic, epoxy, and decorative flake systems engineered for daily use, hot tire pickup, and Midwest winters.',
@@ -11,6 +12,7 @@ const services = [
   },
   {
     key: 'storage',
+    slug: 'storage',
     label: '02',
     title: 'Storage Solutions',
     body: 'Slatwall, overhead racks, custom cabinets, and shelving designed around how you actually use your space.',
@@ -18,6 +20,7 @@ const services = [
   },
   {
     key: 'lighting',
+    slug: 'lighting',
     label: '03',
     title: 'Lighting Upgrades',
     body: 'Bright, layered lighting that makes the garage feel larger, safer, and more polished — task, ambient, and accent.',
@@ -25,6 +28,7 @@ const services = [
   },
   {
     key: 'finish',
+    slug: 'wall-finishing',
     label: '04',
     title: 'Wall & Finishing',
     body: 'Paint, drywall, trim, and finishing details that complete the transformation and tie the space to the rest of your home.',
@@ -32,6 +36,7 @@ const services = [
   },
   {
     key: 'custom',
+    slug: 'custom',
     label: '05',
     title: 'Custom Garage Upgrades',
     body: 'Bespoke additions that make the garage truly yours — workbenches, EV charger installs, dog wash stations, and more.',
@@ -89,7 +94,7 @@ export default function ServicesPage() {
             {services.map((s, i) => (
               <article
                 key={s.key}
-                id={s.key}
+                id={s.slug}
                 className="grid lg:grid-cols-12 gap-8 lg:gap-12 rounded-2xl border border-ink-800/10 bg-bone-50 p-7 lg:p-10 hover:border-ink-800/25 hover:shadow-soft transition"
               >
                 <div className="lg:col-span-4">
@@ -120,11 +125,14 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <div className="mt-7 flex flex-wrap gap-3">
-                    <Link to="/contact" className="btn-primary !py-2.5 !px-5 text-[13px]">
-                      Get a quote for {s.title.toLowerCase()}
+                    <Link to={`/services/${s.slug}`} className="btn-primary !py-2.5 !px-5 text-[13px]">
+                      Learn more
+                      <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                        <path d="M5 12h14M13 6l6 6-6 6" />
+                      </svg>
                     </Link>
-                    <Link to="/gallery" className="btn-secondary !py-2.5 !px-5 text-[13px]">
-                      See examples
+                    <Link to="/contact" className="btn-secondary !py-2.5 !px-5 text-[13px]">
+                      Get a quote
                     </Link>
                   </div>
                 </div>

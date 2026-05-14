@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 const packages = [
   {
     name: 'Essential',
-    subtitle: 'A clean, durable upgrade',
+    subtitle: 'Clean & durable refresh',
+    forYou: 'You want a great-looking floor and proper lighting — without a full build-out.',
     items: [
       'Standard floor coating',
       'Basic lighting',
@@ -14,7 +15,8 @@ const packages = [
   },
   {
     name: 'Enhanced',
-    subtitle: 'More organized, more functional',
+    subtitle: 'Organized, daily-use garage',
+    forYou: 'You use the garage every day and want it to actually work — storage, lighting, and a premium floor.',
     items: [
       'Premium flooring',
       'Storage system',
@@ -25,7 +27,8 @@ const packages = [
   },
   {
     name: 'Signature',
-    subtitle: 'Full garage transformation',
+    subtitle: 'Complete luxury transformation',
+    forYou: 'You want a showpiece garage that feels like a real extension of the home — every detail considered.',
     items: [
       'Full transformation',
       'Custom cabinets',
@@ -82,8 +85,15 @@ export default function Packages({ heading = true }) {
                     0{i + 1}
                   </span>
                 </div>
-                <p className={`text-[14px] mb-7 ${popular ? 'text-bone-200/70' : 'text-stone-deep'}`}>
+                <p className={`text-[14px] mb-5 ${popular ? 'text-bone-200/70' : 'text-stone-deep'}`}>
                   {p.subtitle}
+                </p>
+
+                <div className={`text-[12px] uppercase tracking-[0.16em] font-semibold mb-2 ${popular ? 'text-bronze-400' : 'text-bronze-600'}`}>
+                  Right for you if
+                </div>
+                <p className={`text-[13px] leading-relaxed mb-7 ${popular ? 'text-bone-200/75' : 'text-stone-deep'}`}>
+                  {p.forYou}
                 </p>
 
                 <ul className={`space-y-3 mb-8 ${popular ? 'text-bone-200/85' : 'text-ink-700'}`}>
